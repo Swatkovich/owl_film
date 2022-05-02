@@ -1,0 +1,24 @@
+.application {
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-image: url(./components/componentsImage/Background_long_3.jpg);
+  background-size: cover;
+  padding: 30px 20px 30px 20px;
+  min-height: 100vh;
+}
+
+.application {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.formTabMarge {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+}

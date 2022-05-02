@@ -1,0 +1,45 @@
+.body {
+  display: flex;
+  flex-flow: column;
+  /* margin-top: 100px; */
+  align-items: center;
+}
+
+.bodyNone {
+  display: none;
+}
+
+.bodyUnit {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.bodyUnit div:last-child {
+  margin-left: 9vw;
+}
+
+.bodyUnitText {
+  font-size: 3vh;
+  width: 40vw;
+  color: #FFFAFA;
+}
+
+.img {
+  width: 30vw;
+}
+
+.formJumpText {
+  width: 20vw;
+  font-size: 3vh;
+  size: 40px;
+  color: #FFFAFA;
+  text-align: center;
+}
+
+.formJump {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+}

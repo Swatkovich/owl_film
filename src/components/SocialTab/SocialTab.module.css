@@ -1,0 +1,39 @@
+.socialList {
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 40vh;
+  left: -1vw;
+}
+
+.iconTwitter { 
+  display: block;
+  background-image: url('../componentsImage/Twitter.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 38px;
+  margin-bottom: 15px;
+}
+
+.iconLinkedin { 
+  display: block;
+  background-image: url('../componentsImage/Linkedin.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 38px;
+  margin-bottom: 18px;
+}
+
+.iconEmail { 
+  display: block;
+  background-image: url('../componentsImage/Email.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 38px;;
+}

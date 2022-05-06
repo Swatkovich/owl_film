@@ -1,24 +1,28 @@
 .reg_box {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 40vw;
-  height: 78vh;
+  /* height: 78vh; */
   border-radius: 2vw;
   border: 0.5vh solid antiquewhite;
   margin-top: 10vh;
-  padding: 1vh 5vh 0vh 5vh;
+  padding: 5vh 5vh 5vh 5vh;
 }
   
 .reg_data {
   margin-top: 0vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
 .reg_input_name {
   width: 100%;
   margin: 0;
-  margin-top: 4vh;
+  margin-top: 2vh;
 }
   
 .input {
@@ -50,7 +54,7 @@ margin-top: 2vh;
 }
 
 input[name = Submit] {
-margin-top: 5vh;
+/* margin-top: 15vh; */
 width: 60%;
 }
   

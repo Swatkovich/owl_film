@@ -11,7 +11,7 @@ export default function Registration() {
       <p className={styles.reg_input_name}>Пароль</p>
       <input type="text" name="Password" placeholder="Введите свой пароль" required/>
       <p className={styles.reg_input_name}>Подтверждение пароля</p>
-      <input type="text" name="PasswordConfirm" placeholder="Потвердите свой пароль" required/>
+      <input type="text" name="PasswordConfirm" placeholder="Подтвердите свой пароль" required/>
     </div>
       <input type="submit" name = "Submit" value="Регистрация"/>
     </form>

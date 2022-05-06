@@ -1,16 +1,18 @@
 .auth_box {
 display: flex;
 flex-direction: column;
+justify-content: space-between;
 width: 40vw;
-height: 45vh;
 border-radius: 2vw;
 border: 0.5vh solid antiquewhite;
 margin-top: 25vh;
-padding: 0vh 5vh 0vh 5vh;
+padding: 5vh 5vh 5vh 5vh;
 }
 
 .login_data {
-  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .input {
@@ -27,6 +29,7 @@ padding: 0vh 5vh 0vh 5vh;
 
 input[name = Password] {
   margin-top: 5vh;
+  width: 100%;
  }
 
  input[name = Submit] {

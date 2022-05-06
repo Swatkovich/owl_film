@@ -1,0 +1,151 @@
+.admin_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 40vw; */
+  height: 80vh;
+  border: 0.5vh solid antiquewhite;
+  margin-top: 10vh;
+  padding: 2vh 2vh 2vh 2vh;
+  background-color: rgb(54, 54, 54);
+  font-family: 'Roboto', sans-serif;
+  overflow: auto;
+}
+
+.users_element {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.5vw 0 0.5vw;
+  margin-top: 1vh;
+  font-size: 2vh;
+}
+
+.users_element_avatar {
+  display: block;
+  height: 5vh;
+  width: 5vh;
+  object-fit: cover;
+  border: 0.25vh solid antiquewhite;
+  border-radius: 1.5vh;
+  margin-right: 2vw;
+}
+
+.users_element_name {
+  width: 80%;
+  color:antiquewhite;
+  font-weight: 600;
+}
+
+.users_box {
+  background-color: rgb(221, 221, 221, 0.1);
+  border-radius: 1vw;
+  border: 0.25vh solid antiquewhite;
+  overflow: auto;
+  padding: 1vh;
+}
+
+.users_section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  margin-right: 5vw;
+}
+
+.dialog_box {
+  width: 25vw;
+  height: 70vh;
+  background-color: rgb(221, 221, 221, 0.1);
+  border-radius: 1vw;
+  border: 0.25vh solid antiquewhite;
+  overflow: auto;
+}
+
+.dialog_element {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.5vw 0 0.5vw;
+  margin-top: 1vh;
+  font-size: 2vh;
+}
+
+.dialog_element_avatar {
+  display: block;
+  height: 5vh;
+  width: 5vh;
+  object-fit: cover;
+  border: 0.25vh solid antiquewhite;
+  border-radius: 1.5vh;
+  margin-right: 2vw;
+}
+
+.dialog_element_message {
+  width: 80%;
+  color:antiquewhite;
+  font-weight: 600;
+}
+
+.chat_section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-right: 5vw;
+}
+
+.orders_box {
+  width: 30vw;
+  height: 70vh;
+  padding: 2vh;
+  background-color: rgb(221, 221, 221, 0.1);
+  border-radius: 1vw;
+  border: 0.25vh solid antiquewhite;
+  overflow: auto;
+}
+
+.order_element {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(221, 221, 221, 0.1);
+  border: 0.25vh solid antiquewhite;
+  border-radius: 0.75vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 4vh;
+  width: 100%;
+  height: 6vh;
+  align-items: center;
+}
+
+.order_element:first-child {
+  margin-top: 0;
+}
+
+.download_button {
+  box-sizing: border-box;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  color: #FFFAFA;
+  border: 0.25vh solid #FFFAFA;
+  background-color: rgb(143, 134, 10);
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.download_button:hover {
+  background-color: #FFFAFA;
+  color: #333333;
+  box-shadow: 0px 0px 15px #FFFAFA;
+}
+
+.orders_section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}

@@ -37,6 +37,7 @@ input {
   border: 1px solid #FFFAFA;
   color: #FFFAFA; 
   font-family: 'Roboto', sans-serif; 
+  font-weight: 400;
   font-size: 100%;
   background-color: rgb(221, 221, 221, 0.2);
   margin-top: 15px;
@@ -71,6 +72,7 @@ input:focus::placeholder {
 
 input::placeholder {
   color:#7c7c7c;
+  font-weight: 600;
 }
 
 select[name="Object"] {
@@ -81,7 +83,7 @@ select[name="Object"] {
   border: 1px solid #FFFAFA; 
   color: #FFFAFA; 
   font-family: 'Roboto', sans-serif; 
-  background-color: transparent;
+  background-color: rgb(221, 221, 221, 0.2);
   margin-top: 15px;
 }
 
@@ -96,6 +98,7 @@ textarea[name="Message"] {
   background-color: transparent;
   margin-top: 15px;
   margin-bottom: 30px;
+  background-color: rgb(221, 221, 221, 0.2);
 }
 
 select:focus::placeholder  {

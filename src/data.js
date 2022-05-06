@@ -1,5 +1,8 @@
 import avatar1 from "./components/componentsImage/user.jpg"
 import avatar2 from "./components/componentsImage/admin.jpg"
+import avatar3 from "./components/componentsImage/user2.jpg"
+import avatar4 from "./components/componentsImage/user3.jpg"
+import avatar5 from "./components/componentsImage/user4.jpg"
 
 let profileData = {
   name: "Роман Панин",
@@ -76,6 +79,25 @@ let orders = [
   },
 ];
 
+let users = [
+  {
+    avatar: avatar1,
+    name: "Роман Панин",
+  },
+  {
+    avatar: avatar3,
+    name: "Martha Doval",
+  },
+  {
+    avatar: avatar4,
+    name: "Антон",
+  },
+  {
+    avatar: avatar5,
+    name: "Эд Гарикович",
+  },
+]
+
 export function getDialog() {
   return dialog;
 }
@@ -86,4 +108,8 @@ export function getProfileData() {
 
 export function getOrders() {
   return orders;
+}
+
+export function getUsers() {
+  return users;
 }

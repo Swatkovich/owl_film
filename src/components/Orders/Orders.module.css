@@ -26,7 +26,6 @@
 
 .download_button {
   box-sizing: border-box;
-  /* position: relative; */
   transition-property: background-color, border, box-shadow;
   transition-duration: 0.25s;
   transition-timing-function: ease;

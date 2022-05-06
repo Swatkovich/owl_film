@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  /* width: 40vw; */
+  align-items: flex-start;
   height: 80vh;
   border: 0.5vh solid antiquewhite;
   margin-top: 10vh;

@@ -6,28 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Spectral', serif;
+  color: #FFFAFA;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.formNone {
-  display: none;
-}
-
-.bodyNone {
-  display: none;
-}
-
-.menuNone {
-  display: none;
-}
-
-.menu {
-  margin-top: 20vh;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
 }

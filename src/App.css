@@ -3,10 +3,11 @@
   flex-flow: column;
   align-items: center;
   box-sizing: border-box;
-  background-image: url(./components/componentsImage/Background_long_3.jpg);
+  background-image: url(./img/Background_long_4.jpg);
   background-size: cover;
   padding: 30px 20px 30px 20px;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 .application {
@@ -17,8 +18,97 @@
   width: 0;
 }
 
-.formTabMarge {
+nav {
+  color: white;
+}
+
+.body {
   display: flex;
-  margin-top: 200px;
-  justify-content: center;
+  flex-flow: column;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.bodyUnit {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.bodyUnit:not(:first-child) {
+  margin-top: 300px;
+}
+
+.bodyUnit div:last-child {
+  margin-left: 150px;
+}
+
+.bodyUnitText {
+  font-size: 30px;
+  width: 60vw;
+  color: #FFFAFA;
+  width: 800px;
+}
+
+.img {
+  width: 30vw;
+}
+
+.formJumpText {
+  width: 20vw;
+  font-size: 32px;
+  size: 40px;
+  color: #FFFAFA;
+  text-align: center;
+}
+
+.formJump {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+}
+
+.nav {
+  display: none;
+  flex-flow: column;
+  width: 15vw;
+  padding: 15px;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  color: #ddd;
+  text-align: center;
+  position: fixed;
+  right: 2vw;
+  top: 15vh;
+  font-size: 2vh;
+  background-color: black;
+}
+
+#nav:target {
+  display: flex;
+}
+
+.link {
+  color: #ddd;
+  margin-top: 3vh;
+  font-weight: 600;
+  font-size: 18px;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  text-decoration: none;
+}
+
+.link:first-child {
+  margin-top: 0;
+}
+
+.link:visited {
+  color: #ddd;
+}
+
+.link:hover {
+  background-color: #FFFAFA;
+  color: #333333;
+  box-shadow: 0px 0px 15px #FFFAFA;
 }

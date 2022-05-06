@@ -3,18 +3,14 @@
 }
 
 form {
-  /* display: block; */
+
   width: 70vw;
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
   color: #FFFAFA;
-  margin-top: 0px;
+  margin-top: 15vh;
   margin-bottom: 200px;
-}
-
-.formNone {
-  display: none;
 }
 
 .formName {
@@ -42,13 +38,17 @@ input {
   color: #FFFAFA; 
   font-family: 'Roboto', sans-serif; 
   font-size: 100%;
-  background-color: transparent;
+  background-color: rgb(221, 221, 221, 0.2);
   margin-top: 15px;
 }
 
 input[name = Name] {
  width: 100%;
  margin-right: 22px;
+}
+
+input[name = Surname] {
+  margin-top: 0;
 }
 
 input[name = Submit] {
@@ -67,6 +67,10 @@ input[name = Submit]:hover {
 input:focus::placeholder {
   color: #FFFAFA; 
   border-radius: 0px;
+}
+
+input::placeholder {
+  color:#7c7c7c;
 }
 
 select[name="Object"] {

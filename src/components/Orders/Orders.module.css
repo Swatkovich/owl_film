@@ -1,0 +1,46 @@
+.orders_box {
+  height: 80%;
+  width: 100%;
+  margin-right: 2vw;
+  overflow: auto;
+  padding-bottom: 2vh;
+}
+
+.order_element {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(221, 221, 221, 0.1);
+  border: 0.25vh solid antiquewhite;
+  border-radius: 0.75vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 4vh;
+  width: 100%;
+  height: 6vh;
+  align-items: center;
+}
+
+.order_element:first-child {
+  margin-top: 0;
+}
+
+.download_button {
+  box-sizing: border-box;
+  /* position: relative; */
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  color: #FFFAFA;
+  border: 0.25vh solid #FFFAFA;
+  background-color: rgb(16, 122, 48);
+  border-radius: 4px;
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.download_button:hover {
+  background-color: #FFFAFA;
+  color: #333333;
+  box-shadow: 0px 0px 15px #FFFAFA;
+}

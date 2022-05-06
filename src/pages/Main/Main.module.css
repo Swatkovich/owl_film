@@ -1,0 +1,64 @@
+.application2 {
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  /* background-image: url(./img/Background_long_3.jpg);
+  background-size: cover; */
+  padding: 30px 20px 30px 20px;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.application {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+nav {
+  color: white;
+}
+
+.body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.bodyUnit {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.bodyUnit div:last-child {
+  margin-left: 9vw;
+}
+
+.bodyUnitText {
+  font-size: 3vh;
+  width: 40vw;
+  color: #FFFAFA;
+}
+
+.img {
+  width: 30vw;
+}
+
+.formJumpText {
+  width: 20vw;
+  font-size: 3vh;
+  size: 40px;
+  color: #FFFAFA;
+  text-align: center;
+}
+
+.formJump {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}

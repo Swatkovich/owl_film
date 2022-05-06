@@ -1,0 +1,30 @@
+.content_box {
+display: flex;
+flex-direction: row;
+width: 80vw;
+height: 85vh;
+border-radius: 2vw;
+border: 0.5vh solid antiquewhite;
+margin-top: 5vh;
+}
+
+.orders_box {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.orders_title {
+  margin-top: 4vh;
+  font-weight: 400;
+  font-size: 2vh;
+}
+
+.content_box_left {
+  display: flex;
+  width: 40vw;
+  flex-flow: column;
+  align-items: center;
+}

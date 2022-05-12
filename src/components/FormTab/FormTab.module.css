@@ -6,7 +6,8 @@ form {
 
   width: 70vw;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
   font-family: 'Roboto', sans-serif;
   color: #FFFAFA;
   margin-top: 15vh;
@@ -60,9 +61,9 @@ input[name = Submit] {
 }
 
 input[name = Submit]:hover {
-  background-color:#FFFAFA ;
+  background-color: #FFFAFA;
   color: #333333;
-  box-shadow: 0px 0px 5px #FFFAFA;
+  box-shadow: 0px 0px 15px #FFFAFA;
 }
 
 input:focus::placeholder {
@@ -104,6 +105,10 @@ textarea[name="Message"] {
 select:focus::placeholder  {
   color: #FFFAFA; 
   border-radius: 0px;
+}
+
+select option {
+  background-color: #333333;
 }
 
 /* input:required {

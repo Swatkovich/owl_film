@@ -32,3 +32,16 @@
   color:antiquewhite;
   font-weight: 600;
 }
+
+.dialog_input {
+  padding: 10px;
+  border: 1px solid #FFFAFA;
+  border-radius: 2px;
+  color: #FFFAFA; 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400;
+  font-size: 100%;
+  background-color: rgb(77, 77, 77);
+  position: sticky;
+  bottom: 0px;
+}

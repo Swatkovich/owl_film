@@ -42,6 +42,7 @@ export default function Admin() {
             <p className={styles.dialog_element_message}>{element.message}</p>
           </div>
         ))}
+        <input className={styles.dialog_input} type="text" name="message" placeholder="Сообщение" required/>
           </div>
         </div>
 

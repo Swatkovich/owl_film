@@ -50,7 +50,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   margin-right: 5vw;
 }
 
@@ -88,6 +88,20 @@
   color:antiquewhite;
   font-weight: 600;
 }
+
+.dialog_input {
+  padding: 10px;
+  border: 0.2vh solid #FFFAFA;
+  border-radius: 2px;
+  color: #FFFAFA; 
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 400;
+  font-size: 100%;
+  background-color: rgb(77, 77, 77);
+  position: sticky;
+  bottom: 0px;
+}
+
 
 .chat_section {
   display: flex;

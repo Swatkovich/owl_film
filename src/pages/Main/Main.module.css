@@ -3,11 +3,10 @@
   flex-flow: column;
   align-items: center;
   box-sizing: border-box;
-  /* background-image: url(./img/Background_long_3.jpg);
-  background-size: cover; */
   padding: 30px 20px 30px 20px;
   min-height: 100vh;
   min-width: 100vw;
+  z-index: 2;
 }
 
 .application {

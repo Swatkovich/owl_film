@@ -6,6 +6,7 @@ height: 85vh;
 border-radius: 2vw;
 border: 0.5vh solid antiquewhite;
 margin-top: 5vh;
+z-index: 2;
 }
 
 .orders_box {

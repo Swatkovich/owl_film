@@ -16,6 +16,7 @@
 }
 ::-webkit-scrollbar {
   width: 0;
+  height: 0;
 }
 
 .body {
@@ -80,7 +81,7 @@
   top: -1vh; 
   font-size: 2vh;
   background-color: black;
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav_true {
@@ -99,7 +100,7 @@
   top: -1vh; 
   font-size: 2vh;
   background-color: black;
-  z-index: 2;
+  z-index: 3;
 }
 
 .navIcon {
@@ -110,14 +111,17 @@
   top: 2vh;
   right : 2vw;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav_close {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  padding: 0;
+  width: 95vw;
+  height: 92vh;
+  top: 8vh;
+  left: 5vw;
+  z-index: 1;
 }
 
 .link {
@@ -151,5 +155,5 @@
 }
 
 .main_button {
-  z-index: 2;
+  z-index: 3;
 }

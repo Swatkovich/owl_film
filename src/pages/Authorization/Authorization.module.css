@@ -7,6 +7,7 @@ border-radius: 2vw;
 border: 0.5vh solid antiquewhite;
 margin-top: 25vh;
 padding: 5vh 5vh 5vh 5vh;
+z-index: 2;
 }
 
 .login_data {

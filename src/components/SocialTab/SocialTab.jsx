@@ -12,7 +12,7 @@ const SocialTab = () => {
           </a>
         </li>
         <li>
-          <a  href="https://ru.wikipedia.org/wiki/LinkedIn" target="_blank" rel="noreferrer">
+          <a href="https://ru.wikipedia.org/wiki/LinkedIn" target="_blank" rel="noreferrer">
             <span className={styles.iconLinkedin}></span>
           </a>
         </li>

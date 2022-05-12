@@ -24,7 +24,7 @@ const FormTab = (props) => {
                 },
     })
         .then(response => response.json())
-        .then(data => (data.id))
+        .then(data => (data.id));
     setSurname('');
     setName('');
     setEmail('');

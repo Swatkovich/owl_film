@@ -1,9 +1,7 @@
 import styles from "./Orders.module.css";
 
-import { getOrders } from "../../data";
-
 export default function Orders(props) {
-  const orders = getOrders();
+  const orders = props.orders;
 
   function status(order) {
     if (order.status) {
@@ -14,11 +12,26 @@ export default function Orders(props) {
     }
   }
 
+  function object(object) {
+    if (object === "Marige/ Event") {
+      return "Свадьба/ Мероприятие"
+    }
+    else if (object === "Couple Session") {
+      return "Парная фотосессия"
+    }
+    else if (object === "Solo Session") {
+      return "Одиночная фотосессия"
+    }
+    else {
+      return "Другое"
+    }
+  }
+
   return (
       <div className={styles.orders_box}>
         {orders.map((element, id) => (
           <div className={styles.order_element} key={id}>
-            <p>{element.name}</p>
+            <p className={styles.order_element_text}>{`Заказ №${ id + 1 } от ${element.date}. ${object(element.object)}`}</p>
             {status(element)}
           </div>
         ))}

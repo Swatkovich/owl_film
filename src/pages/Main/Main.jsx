@@ -21,15 +21,15 @@ function Main() {
       </div>
       <div className={styles.bodyUnit}>
         <div><img className={styles.img} src={firstImage} alt='portret'></img></div>
-        <div className={styles.bodyUnitText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div className={styles.bodyUnitText}>Плёночная фотография - это не просто отпечаток в истории ушедшей аналоговой эпохи. Это огромный пласт знаний, опыта, проб и ошибок. Яыление, которое существует уже более чем 200 лет. То явление, что оставивило свой след в массовой культуре. Инструмент, позволивший начать изучать наш с вами мир таким, каким он являлся.</div>
       </div>
       <div className={styles.bodyUnit}>
-        <div className={styles.bodyUnitText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div className={styles.bodyUnitText}>Сейчас плёночная фотография - это инструмент, позволяющий нам почувствовать отголоски той эпохи. Предаться тёплым воспоминаниям дества и юнешества, или же впервые почувствовать, как хранили воспоминнаия воспоминания наши с вами старшие поколения. Сохранить фотографии не только в виде "единиц" и "нулей", но а так же в материальной форме: запечатлеть фотографии в той самой полупрозрачной ленте, которую любят рассматривать просвечивая через свет лампочки.</div>
         <div><img className={styles.img} src={secondImage} alt='portret'></img></div>
       </div>
       <div className={styles.bodyUnit}>
         <div><img className={styles.img} src={thirdImage} alt='portret'></img></div>
-        <div className={styles.bodyUnitText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div className={styles.bodyUnitText}>Но все мы живём не в прошлом, а в современном мире. Новые идеи, новые масштабы, новые способоы реализации. Но ничто не мешает нам применить свои самые смелые идеи и на плёночную фотографию.</div>
       </div>
     </div>
       </div>

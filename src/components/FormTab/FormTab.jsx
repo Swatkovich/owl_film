@@ -1,5 +1,5 @@
 // import { Response } from 'express';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 
 import styles from './FormTab.module.css';
 
@@ -9,19 +9,21 @@ const FormTab = (props) => {
   const [email, setEmail] = useState('');
   const [object, setObject] = useState('');
   const [message, setMessage] = useState('');
+  const today = new Date(),
+  date = today.getDate() +'.'+ (today.getMonth() + 1) + '.' + today.getFullYear();
+  const [color, setColor] = useState('#7c7c7c');
+
+  const handleColorChange = e => {
+    console.log(color);
+    setColor('#FFFAFA')
+  }
 
   const handleSubmit = e => {
-    console.log(surname, name, email, object, message);
     e.preventDefault()
-    fetch('http://localhost:3001/api/Form' , {
+    fetch('http://localhost:3001/api/Orders' , {
       method: 'POST',
-      body: JSON.stringify({ surname: surname, name: name, email: email, object: object, message: message }),
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json',
-                  'Accept': 'application/json',
-                  'Access-Control-Allow-Origin': '*',
-                  'Access-Control-Allow-Credentials': true 
-                },
+      body: JSON.stringify({ "surname": surname, "name": name, "email": email, "object": object, "message": message, "status": false, "date": date}),
+      headers: { 'Content-Type': 'application/json'},
     })
         .then(response => response.json())
         .then(data => (data.id));
@@ -77,6 +79,8 @@ const FormTab = (props) => {
             type="text" 
             name="Object" 
             value={object} 
+            style={{color: {color}}}
+            onClick={handleColorChange}
             onChange={(e) => setObject(e.target.value)} 
             placeholder="Object" 
             required
@@ -96,7 +100,7 @@ const FormTab = (props) => {
           rows="7" 
           value={message} 
           onChange={(e) => setMessage(e.target.value)} 
-          placeholder="Сообщение" 
+          placeholder="Что вы хотите увидеть в своей фотосессии" 
           required
         ></textarea>
         <p className={styles.star}>*</p>

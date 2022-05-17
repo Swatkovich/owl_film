@@ -9,7 +9,7 @@ form {
   justify-content: center;
   /* align-items: center; */
   font-family: 'Roboto', sans-serif;
-  color: #FFFAFA;
+  color: #e9e9e9;
   margin-top: 15vh;
   margin-bottom: 100px;
 }
@@ -34,9 +34,9 @@ form {
 input {
   width: 100%;
   height:40px;
+  border: 1px solid #e9e9e9;
   padding: 10px;
-  border: 1px solid #FFFAFA;
-  color: #FFFAFA; 
+  color: #e9e9e9; 
   font-family: 'Roboto', sans-serif; 
   font-weight: 400;
   font-size: 100%;
@@ -61,13 +61,13 @@ input[name = Submit] {
 }
 
 input[name = Submit]:hover {
-  background-color: #FFFAFA;
+  background-color: #e9e9e9;
   color: #333333;
-  box-shadow: 0px 0px 15px #FFFAFA;
+  box-shadow: 0px 0px 15px #e9e9e9;
 }
 
 input:focus::placeholder {
-  color: #FFFAFA; 
+  color: #e9e9e9; 
   border-radius: 0px;
 }
 
@@ -81,19 +81,27 @@ select[name="Object"] {
   height:40px; 
   font-size: 100%;
   padding: 10px; 
-  border: 1px solid #FFFAFA; 
-  color: #FFFAFA; 
+  border: 1px solid #e9e9e9; 
+  color: #e9e9e9; 
   font-family: 'Roboto', sans-serif; 
   background-color: rgb(221, 221, 221, 0.2);
   margin-top: 15px;
 }
 
+
+/* option {
+  color: black;
+}
+option:first-of-type {
+  color: #9e9e9e;
+} */
+
 textarea[name="Message"] {
   width: 100%; 
   height: 180px; 
   padding: 10px; 
-  border: 1px solid #FFFAFA; 
-  color: #FFFAFA; 
+  border: 1px solid #e9e9e9; 
+  color: #e9e9e9; 
   font-family: 'Roboto', sans-serif; 
   font-size: 100%;
   background-color: transparent;
@@ -103,7 +111,7 @@ textarea[name="Message"] {
 }
 
 select:focus::placeholder  {
-  color: #FFFAFA; 
+  color: #e9e9e9; 
   border-radius: 0px;
 }
 

@@ -24,6 +24,11 @@
   margin-top: 0;
 }
 
+.orser_element_text {
+  font-size: 3vh;
+  font-weight: 600;
+}
+
 .download_button {
   box-sizing: border-box;
   transition-property: background-color, border, box-shadow;

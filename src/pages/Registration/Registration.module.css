@@ -38,7 +38,15 @@
 }
   
 input[name = Name] {
-  margin-top: 0vh;
+  margin-top: 2vh;
+}
+
+input[name = Surname] {
+  margin-top: 2vh;
+}
+
+input[name = Login] {
+  margin-top: 2vh;
 }
 
 input[name = Email] {

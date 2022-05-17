@@ -1,31 +1,37 @@
 import './App.css';
 import {Link, Outlet} from "react-router-dom";
-import MainPageButton from "./components/MainPageButton/MainPageButton";
 import SocialTab from "./components/SocialTab/SocialTab"
-import menu from './components/componentsImage/menu.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const [show, setShow] = useState(false);
+  const [user, setUser] = useState();
 
-  const handleCllick = () => {
-    setShow(!show)
+  useEffect(()=> {
+    fetch('http://localhost:3001/api/Registration', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json',  "auth-token": localStorage.getItem("token")} 
+    }).then(res => res.json()).then(data => {setUser(data); console.log(data)});
+  }, [])
+
+  const handleExit = () => {
+    localStorage.removeItem("token");
   }
 
   return (
       <div className='application' id="application">
-        <div className='nav_close' onClick={()=>setShow(false)}></div>
-        <SocialTab className='social_tab_area'/>
-          <Link className='main_button' onClick={() => setShow(false)} to="/Main"><MainPageButton/></Link>
-          <img src={menu} onClick={handleCllick} alt="menu" className='navIcon'/>
-          <nav className={show? 'nav_true' : 'nav_false'} id='nav'>
-            <Link className='link' onClick={() => setShow(false)} to="/Form">Заявка</Link>
-            <Link className='link' onClick={() => setShow(false)} to="/Gallery">Галлерея</Link>
-            <Link className='link' onClick={() => setShow(false)} to="/Admin">Админка</Link>
-            <Link className='link' onClick={() => setShow(false)} to="/Authorization">Авторизация</Link>
-            <Link className='link' onClick={() => setShow(false)} to="/Registration">Регистрация</Link>
-            <Link className='link' onClick={() => setShow(false)} to="/Profile">Профиль</Link>
-          </nav>
+          <SocialTab className='social_tab_area'/>
+          { user ? <div className='top_bar'>
+            <Link className='main_button' to="/Main"></Link>
+            <nav className='nav_true' id='nav'>
+              <Link className='link' to="/Form">Заявка</Link>
+              <Link className='link' to="/Gallery">Галлерея</Link>
+              {user.role !== 'user' && user.role !== 'admin' ? <Link className='link' to="/Authorization">Войти</Link> : null}
+              {user.role !== 'user' && user.role !== 'admin' ? <Link className='link' to="/Registration">Регистрация</Link>: null }
+              {user.role !== 'admin' && user.role === "user" ? <Link className='link' to="/Profile">Профиль</Link> : null }
+              {user.role === 'admin' ? <Link className='link' to="/Admin">Админка</Link> : null}
+              {user.role !== '' ? <button onClick={handleExit} className= "exit_button">Выйти</button> : null}
+            </nav>
+        </div> : null}
       <Outlet/>
       </div>
   );

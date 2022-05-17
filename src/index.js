@@ -28,8 +28,8 @@ root.render(
           <Route
             path="*"
             element={
-              <main style={{ padding: "1rem" }}>
-                <p color='white'>There's nothing here!</p>
+              <main style={{ padding: "1rem", margin: "30vh 0px", font: "50px sans-serif"}}>
+                <p color='white'>NO PAGE?</p>
               </main>
             }
           />
@@ -38,7 +38,4 @@ root.render(
     </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

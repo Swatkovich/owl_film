@@ -1,10 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import styles from "./Authorization.module.css";
 
 export default function Authorization() {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = "/Main";
+    navigate(path)
+  }
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -17,6 +24,7 @@ export default function Authorization() {
           alert('Неверный Логин или Пароль');
       }
           else {
+          routeChange();
           return res.text();
         }
     }).then(token => localStorage.setItem("token", token))

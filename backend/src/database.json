@@ -27,6 +27,10 @@
       "role": "user",
       "messages": [
         {
+          "avatar": "avatar2",
+          "message": "Здесь вы можете задать мне любые вопросы."
+        },
+        {
           "avatar": "avatar1",
           "message": "Жду фул у себя на столе через 5 минут"
         },
@@ -53,6 +57,36 @@
         }
       ],
       "id": "Xzo_H8kkL9a-ZF70ooK3D"
+    },
+    "TeCKWbuAs4xWb04FGdAbC": {
+      "name": "Name",
+      "surname": "ываы",
+      "login": "konstantin",
+      "email": "konstantin@mail.ru",
+      "password": "konstantin",
+      "role": "user",
+      "messages": [
+        {
+          "avatar": "avatar2",
+          "message": "Здесь вы можете задать мне любые вопросы."
+        }
+      ],
+      "id": "TeCKWbuAs4xWb04FGdAbC"
+    },
+    "2nU63iUzsfwqfh7-d9RAu": {
+      "name": "lesha",
+      "surname": "lesha",
+      "login": "lesha",
+      "email": "lesha@mail.ru",
+      "password": "lesha",
+      "role": "user",
+      "messages": [
+        {
+          "avatar": "avatar2",
+          "message": "Здесь вы можете задать мне любые вопросы."
+        }
+      ],
+      "id": "2nU63iUzsfwqfh7-d9RAu"
     }
   },
   "orders": {

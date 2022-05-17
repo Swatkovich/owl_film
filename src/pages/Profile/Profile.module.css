@@ -2,11 +2,12 @@
 display: flex;
 flex-direction: row;
 width: 80vw;
-height: 85vh;
+height: 83vh;
 border-radius: 2vw;
 border: 0.5vh solid antiquewhite;
-margin-top: 5vh;
+margin-top: 12vh;
 z-index: 2;
+margin-bottom: 0;
 }
 
 .orders_box {

@@ -15,7 +15,7 @@ export default function Registration() {
       e.preventDefault()
       fetch('http://localhost:3001/api/Registration' , {
         method: 'POST',
-        body: JSON.stringify({"name":name, "surname": surname, "login": login, "email": email, "password": password, "role": "user", "messages": {} }),
+        body: JSON.stringify({"name":name, "surname": surname, "login": login, "email": email, "password": password, "role": "user", "messages": [{"avatar": "avatar1","message": "Здесь вы можете задать мне любые вопросы."}] }),
         headers: { 'Content-Type': 'application/json'},
       })
           .then((res) => {

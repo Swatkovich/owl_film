@@ -29,7 +29,8 @@ usersRouter.get("/", (req, res) => {
 });
 
 usersRouter.post("/", (req, res) => {
-  if ( database.getUserByLogin('romanpnn') === undefined ) {
+  console.log(req.body)
+  if ( database.getUserByLogin(req.body) === undefined ) {
     const userId = database.addUser(req.body);
 
     res.status(201).send(userId);

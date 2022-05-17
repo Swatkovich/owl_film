@@ -1,4 +1,4 @@
-import avatar1 from "./components/componentsImage/user.jpg"
+import avatar1 from "./components/componentsImage/blankdirectory.png"
 import avatar2 from "./components/componentsImage/admin.jpg"
 import avatar3 from "./components/componentsImage/user2.jpg"
 import avatar4 from "./components/componentsImage/user3.jpg"
@@ -7,6 +7,12 @@ import avatar5 from "./components/componentsImage/user4.jpg"
 let profileData = {
   name: "Роман Панин",
   avatar: avatar1,
+}
+
+let adminData = {
+  adminName: "Савенков Иван",
+  adminAvatar:  avatar2,
+  userAvatar: avatar1
 }
 
 let dialog = [
@@ -112,4 +118,8 @@ export function getOrders() {
 
 export function getUsers() {
   return users;
+}
+
+export function getAdminData() {
+  return adminData;
 }

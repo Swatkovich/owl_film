@@ -9,7 +9,7 @@
   padding: 5vh 5vh 5vh 5vh;
   z-index: 2;
 }
-  
+
 .reg_data {
   margin-top: 0vh;
   width: 100%;
@@ -24,19 +24,19 @@
   margin: 0;
   margin-top: 4vh;
 }
-  
+
 .input {
   width: 100%;
   height:40px;
   padding: 10px;
   border: 1px solid #FFFAFA;
-  color: #FFFAFA; 
-  font-family: 'Roboto', sans-serif; 
+  color: #FFFAFA;
+  font-family: 'Roboto', sans-serif;
   font-size: 100%;
   background-color: transparent;
   margin-top: 15px;
 }
-  
+
 input[name = regName] {
   margin-top: 5vh;
 }
@@ -73,38 +73,3 @@ input[name = SubmitForm]:hover {
   color: #333333;
   box-shadow: 0px 0px 15px #e9e9e9;
 }
-
-.modal_window {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255, 0.05);
-}
- 
-.modal_button {
-  color: #e9e9e9;
-  font-weight: 400;
-  font-size: 1.5vw;
-  all: unset;
-  text-align: center;
-  background-color: rgba(3,3,3);
-  margin-top: 8vh;
-  width: 25%;
-  height: 20%;
-  border: 0.25vh solid #e9e9e9;
-  border-radius: 2vh;
-  transition-property: background-color, border, box-shadow;
-  transition-duration: 0.25s;
-  transition-timing-function: ease;
-}
-
-.modal_button:hover {
-  background-color: #e9e9e9;
-  color: #333333;
-  box-shadow: 0px 0px 15px #e9e9e9;
-}
-
-  

@@ -1,41 +1,18 @@
-import { createContext, useState, useContext, useEffect } from 'react';
+import {createContext, useState, useContext, useEffect} from 'react';
 
-const AuthContext = createContext({
-    token: null,
-    user: null,
-    login: () => {},
-    logout: () => {},
+const MessageContext = createContext({
+    /** Глобальное сообщение пользователю в модальном окне с кнопкой ОК */
+    message: '',
 });
 
-export const AuthProvider = ({children}) => {
-    const [token, setToken] = useState(localStorage.getItem("token"));
-    const [user, setUser] = useState(null);
+export const MessageProvider = ({children}) => {
+    const [message, setMessage] = useState('');
 
-    useEffect(()=> {
-        if(token) {
-            fetch('http://localhost:3001/api/Registration', {
-                method: 'GET',
-                headers: { 'Content-Type': 'application/json',  "auth-token": token }
-            }).then(res => res.json()).then(setUser);
-        } else {
-            setUser(null)
-        }
-        localStorage.setItem("token", token)
-    },[token])
-
-    function login(token) {
-        setToken(token);
-    }
-
-    function logout() {
-        setToken(null);
-    }
-
-    return <AuthContext.Provider value={{ token, user, login, logout }}>{children}</AuthContext.Provider>
+    return <MessageContext.Provider value={{message, setMessage}}>{children}</MessageContext.Provider>
 }
 
-export function useAuth() {
-    return useContext(AuthContext)
+export function useMessage() {
+    return useContext(MessageContext)
 }
 
 

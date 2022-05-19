@@ -5,13 +5,14 @@
   border-radius: 1vw;
   border: 0.25vh solid #e9e9e9;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .dialog_element {
   display: flex;
   flex-flow: row;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   padding: 0 0.5vw 0 0.5vw;
   margin-top: 1vh;
   font-size: 2vh;
@@ -42,6 +43,7 @@
 .dialog_input {
   padding: 10px;
   border: 1px solid #FFFAFA;
+  width: 25vw;
   border-radius: 2px;
   color: #FFFAFA; 
   font-family: 'Roboto', sans-serif; 

@@ -7,7 +7,7 @@ export default function Orders(props) {
   return (
       <div className={styles.orders_box}>
         {orders.map((element, id) => (
-          <UserOrder date={element.date} isAdmin={props.isAdmin} key={id} object={element.object} status={element.status} number = {id + 1}/>
+          <UserOrder date={element.date} isAdmin={props.isAdmin} key={id} object={element.object} status={element.status} number = {id + 1} link={element.link} id={element.id}/>
         ))}
       </div>
   );

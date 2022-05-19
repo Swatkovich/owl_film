@@ -14,6 +14,11 @@ ordersRouter.post("/", (req, res) => {
   res.status(201).send(orders);
 });
 
+ordersRouter.put("/", (req, res) => {
+  database.updateOrderLink(req.body);
+  res.status(202).send();
+});
+
 ordersRouter.get("/", (req, res) => {
   const token = req.headers["auth-token"];
 
@@ -22,7 +27,7 @@ ordersRouter.get("/", (req, res) => {
       res.status(403).send();
     }
     const orders = database.getUserOrders(userId);
-
+    console.log(orders)
     res.status(200).send(orders);
   });
 });

@@ -120,7 +120,8 @@
   transition-property: background-color, border, box-shadow;
   transition-duration: 0.25s;
   transition-timing-function: ease;
-  border-radius: 2vh;
+  border-radius: 1vh;
+  padding: 0.5vh;
   cursor: pointer;
   z-index: 3;
 }

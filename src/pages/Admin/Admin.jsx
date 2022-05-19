@@ -14,6 +14,8 @@ export default function Admin() {
   const handleUserClick = (user, id) => {
     setUserMessages(user.messages);
     setUser(user);
+    const block = document.getElementById("adminChat");
+    block.scrollTop = block.scrollHeight + 100;
     for (let i = 0; i < users.length; i++) {
       document.getElementById(i).style.border="0.1vh solid #e9e9e9";
     }
@@ -36,19 +38,21 @@ export default function Admin() {
   useEffect(() => {
     fetch('http://localhost:3001/api/AdminOrders', {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json' } 
+      headers: { 'Content-Type': 'application/json' }
     }).then(res => res.json()).then(data => {setOrders(data)});
   }, [])
 
-  useEffect(()=> {
+  useEffect(() => {
     fetch('http://localhost:3001/api/Admin', {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json' } 
+      headers: { 'Content-Type': 'application/json' }
     }).then(res => res.json()).then(data => {setUsers(data);});
   }, [])
 
   const handleSubmit = useCallback(e => {
     e.preventDefault();
+    const block = document.getElementById("adminChat");
+    block.scrollTop = block.scrollHeight;
     const input = e.currentTarget[0];
     const messageText = e.currentTarget[0].value;
     if (!messageText) {
@@ -71,7 +75,7 @@ export default function Admin() {
             <div className={styles.users_box}>
             {users.map((element, id) => (
            <div className={styles.users_element} key={id} id={id} onClick={() => handleUserClick(element, id)}>
-              <img className={styles.users_element_avatar} src={handleAvatar(element.avatar)} alt="avatar"></img>
+              <img className={styles.users_element_avatar} src={handleAvatar(element.avatar)} alt="avatar" />
               <p className={styles.usersa_element_name}>{element.surname} {element.name}</p>
             </div>
             ))}
@@ -81,33 +85,33 @@ export default function Admin() {
   {users ? <div className={styles.chat_section}>
           <p className={styles.users_title}>ЧАТ С ПОЛЬЗОВАТЕЛЕМ</p>
           <div className={styles.dialog_box}>
-        <div className={styles.messages_box}>
+        <div id="adminChat" className={styles.messages_box}>
           {userMessages.map((element, id) => (
             <div className={styles.dialog_element} key={id}>
-              <img className={styles.dialog_element_avatar} src={handleAvatar(element)} alt="avatar"></img>
+              <img className={styles.dialog_element_avatar} src={handleAvatar(element)} alt="avatar" />
               <p className={styles.dialog_element_message}>{element.message}</p>
             </div>
           ))}
         </div>
         <form onSubmit={handleSubmit} className={styles.form_input}>
           <input
-            className={styles.dialog_input} 
-            type="text" 
-            name="message" 
+            className={styles.dialog_input}
+            type="text"
+            name="message"
             placeholder="Сообщение"
-            autoComplete='off' 
+            autoComplete='off'
             required/>
         </form>
       </div>
         </div>  : null }
 
-  {filteredOrders ? <div className={styles.orders_section}> 
+  {filteredOrders ? <div className={styles.orders_section}>
               <p className={styles.users_title}>ЗАКАЗЫ ПОЛЬЗОВАТЕЛЯ</p>
               <div className={styles.orders_box}>
               <Orders orders={filteredOrders}></Orders>
               </div>
             </div> : null }
 
-      </div> 
+      </div>
   );
 }

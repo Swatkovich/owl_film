@@ -1,31 +1,48 @@
-import './App.css';
-import {Link, Outlet} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import SocialTab from "./components/SocialTab/SocialTab"
-import { useAuth } from './AuthContext';
-import MainPageButton from './components/MainPageButton/MainPageButton';
+import {AuthProvider} from './contexts/Auth';
+import {MessageProvider} from './contexts/Message'
+import Main from "./pages/Main/Main";
+import Form from "./pages/Form/Form";
+import Gallery from "./pages/Gallery/Gallery";
+import Admin from "./pages/Admin/Admin";
+import Authorization from "./pages/Authorization/Authorization";
+import Registration from "./pages/Registration/Registration";
+import Profile from "./pages/Profile/Profile";
+import React from "react";
+import styles from './App.module.css'
+import {TopBar} from './components/TopBar'
+import {Message} from './components/Message'
 
-function App() {
-  const {role, exit} = useAuth();
-
-
-  return (
-      <div className={'application'} id="application">
-          <SocialTab className='social_tab_area'/>
-           <div className='top_bar'>
-            <Link className='main_button' to="/Main"><MainPageButton/></Link>
-            <nav className='nav_true' id='nav'>
-              <Link className='link' to="/Form">Заявка</Link>
-              <Link className='link' to="/Gallery">Галерея</Link>
-              {!role  && <Link className='link' to="/Authorization">Войти</Link> }
-              {!role  && <Link className='link' to="/Registration">Регистрация</Link> }
-              {role === 'user' && <Link className='link' to="/Profile">Профиль</Link> }
-              {role === 'admin' && <Link className='link' to="/Admin">Администрирование</Link> }
-              {role && <Link onClick={exit} className= "link" to="/Main">Выйти</Link>}
-            </nav>
+export function App() {
+    return (
+        <div className={styles.application}>
+            <AuthProvider>
+                <MessageProvider>
+                    <SocialTab className={styles.social_tab_area}/>
+                    <BrowserRouter>
+                        <TopBar/>
+                        <Routes>
+                            <Route path="/" element={<Main/>}/>
+                            <Route path="/Form" element={<Form/>}/>
+                            <Route path="/Gallery" element={<Gallery/>}/>
+                            <Route path="/Admin" element={<Admin/>}/>
+                            <Route path="/Authorization" element={<Authorization/>}/>
+                            <Route path="/Registration" element={<Registration/>}/>
+                            <Route path="/Profile" element={<Profile/>}/>
+                            <Route
+                                path="*"
+                                element={
+                                    <main style={{padding: "1rem", margin: "30vh 0px", font: "50px sans-serif"}}>
+                                        <p color='white'>NO PAGE?</p>
+                                    </main>
+                                }
+                            />
+                        </Routes>
+                    </BrowserRouter>
+                    <Message/>
+                </MessageProvider>
+            </AuthProvider>
         </div>
-      <Outlet/>
-      </div>
-  );
+    );
 }
-
-export default App;

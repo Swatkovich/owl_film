@@ -1,0 +1,40 @@
+.application {
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px 20px 30px 20px;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.img {
+  width: 30vw;
+}
+
+.formJumpText {
+  width: 20vw;
+  font-size: 32px;
+  size: 40px;
+  color: #e9e9e9;
+  text-align: center;
+}
+
+.formJump {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+}
+
+.social_tab_area {
+  z-index: 3;
+}
+
+

@@ -64,6 +64,19 @@ class Database {
     return database.orders[orderId];
   }
 
+  updateOrderLink(body) {
+    console.log(body)
+    const database = this.readFile();
+    const id = body.orderId;
+    const link = body.link;
+    console.log(id);
+    console.log(link);
+    // console.log(database.orders[id].status);
+    database.orders[id].link = link;
+    database.orders[id].status = true;
+    this.writeFile(database);
+  }
+
   getOrders() {
     const database = this.readFile();
     const orders = Object.values(database.orders)

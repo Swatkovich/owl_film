@@ -18,6 +18,7 @@ function formatObject(object) {
 }
 
 const UserOrder = (props) => {
+<<<<<<< HEAD
     const [downloadModal, setDownloadModal] = useState(null);
     const [uploadModal, setUploadModal] = useState(null);
     const [uploadLink, setUploadLink] = useState('');
@@ -80,6 +81,29 @@ const UserOrder = (props) => {
                         </form>
                     </div>
                 </Modal>}
+=======
+    const [vis, setVis] = useState(false);
+    const haveFiles = props.status;
+    const {role} = useAuth();
+
+    const handleClick = () => {
+        setVis(true)
+    }
+
+    return (
+        <div className={styles.order_element}>
+            <p className={styles.order_element_text}>{`Заказ №${props.number} от ${props.date}. ${formatObject(props.object)}`}</p>
+            {haveFiles && role === 'user' && <button className={styles.download_button}>Скачать</button>}
+            {!haveFiles && role === 'user' && <p className={styles.download_information}>Ожидается</p>}
+            {haveFiles && role === 'admin' && <p className={styles.download_information}>Отправлено</p>}
+            {!haveFiles && role === 'admin' &&
+                <button className={styles.download_button} onClick={handleClick}>Загрузить</button>}
+            {vis && <Modal>
+                <div className={styles.modal}>
+                    <form action=""></form>
+                </div>
+            </Modal>}
+>>>>>>> c8138f9792169dd858d2747b5f71898c392644af
         </div>
     )
 }

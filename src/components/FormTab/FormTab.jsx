@@ -4,7 +4,10 @@ import React, {useState} from 'react';
 import styles from './FormTab.module.css';
 import {useAuth} from '../../contexts/Auth';
 import {useMessage} from "../../contexts/Message";
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
+=======
+>>>>>>> c8138f9792169dd858d2747b5f71898c392644af
 
 const FormTab = () => {
     const {user} = useAuth()
@@ -22,6 +25,7 @@ const FormTab = () => {
         setColor('#FFFAFA')
     }
 
+<<<<<<< HEAD
     let navigate = useNavigate();
     const routeChange = () => {
         navigate("/")
@@ -54,6 +58,32 @@ const FormTab = () => {
         })
     }
 
+=======
+    const handleSubmit = e => {
+        e.preventDefault()
+        fetch('http://localhost:3001/api/Orders', {
+            method: 'POST',
+            body: JSON.stringify({
+                "surname": surname,
+                "name": name,
+                "email": email,
+                "object": object,
+                "message": message,
+                "status": false,
+                "date": date
+            }),
+            headers: {'Content-Type': 'application/json'},
+        }).then(() => {
+            setSuccessMessage('Вы успешно отправили заявку');
+            setSurname('');
+            setName('');
+            setEmail('');
+            setObject('');
+            setMessage('');
+        })
+    }
+
+>>>>>>> c8138f9792169dd858d2747b5f71898c392644af
     return (
         <form onSubmit={handleSubmit}>
             <p className={styles.formName}>Оставить заявку</p>

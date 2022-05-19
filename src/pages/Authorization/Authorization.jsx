@@ -33,7 +33,10 @@ export default function Authorization() {
             })
             .then((token) => {
                 onLoginSuccess(token);
+<<<<<<< HEAD
                 setMessage('Вы успешно авторизировались')
+=======
+>>>>>>> c8138f9792169dd858d2747b5f71898c392644af
                 routeChange();
             })
             .catch((error) => {

@@ -9,7 +9,6 @@ export default function Admin() {
   const [userMessages, setUserMessages] = useState([]);
   const [orders, setOrders] = useState();
   const adminData = getAdminData();
-  const [message, setMessage] = useState('');
   const [user, setUser] = useState();
 
   const handleUserClick = (user, id) => {

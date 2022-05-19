@@ -9,7 +9,7 @@ const ordersRouter = express.Router();
 const database = new Database();
 
 ordersRouter.post("/", (req, res) => {
-  const orderId = database.addOrder(req.body);
+   database.addOrder(req.body);
   const orders = database.getOrders();
   res.status(201).send(orders);
 });

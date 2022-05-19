@@ -16,7 +16,7 @@ const FormTab = (props) => {
   const today = new Date(),
   date = today.getDate() +'.'+ (today.getMonth() + 1) + '.' + today.getFullYear();
   const [color, setColor] = useState('#7c7c7c');
-  const {setOrders} = useAuth;
+  const {setOrders} = useAuth();
 
   const handleColorChange = e => {
     setColor('#FFFAFA')

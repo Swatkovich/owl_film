@@ -37,7 +37,7 @@ export default function Profile() {
         </div>
       <div className={styles.orders_box}>
         <p className={styles.orders_title}>ЗАКАЗЫ</p>
-        {orders && <Orders orders={orders} isAdmin={user.role === 'admin'}/>}
+        {orders && user && <Orders orders={orders} isAdmin={user.role === 'admin'}/>}
       </div>
     </div> 
   );

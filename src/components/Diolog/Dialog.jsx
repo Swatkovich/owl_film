@@ -30,7 +30,7 @@ export default function Dialog( props ) {
     }).then(() => {
     setMessages(messages.concat([{avatar: user.avatar, message: messageText}])) 
     input.value = '';})
-  },[user?.id, messages, user.avatar])
+  },[user?.id, messages, user?.avatar])
 
   return (
       <div className={styles.dialog_box}>

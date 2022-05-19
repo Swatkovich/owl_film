@@ -30,13 +30,6 @@ export const AuthProvider = ({children}) => {
         }
     },[token])
 
-    useEffect(() => {
-        fetch('http://localhost:3001/api/Registration', {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json', "auth-token": token}
-        }).then(res =>res.json()).then (data => setOrders(data));
-    },[orders, token])
-
     function saveToken(token) {
         setToken(token);
         localStorage.setItem("token", token)

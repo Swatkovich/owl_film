@@ -11,7 +11,7 @@ export function TopBar() {
         <div className={styles.top_bar}>
             <Link className={styles.main_button} to="/"><MainPageButton/></Link>
             <nav className={styles.nav} id='nav'>
-                {user?.role !== 'admin' && <Link className={styles.link} to="/Form">Заявка</Link>}
+                <Link className={styles.link} to="/Form">Заявка</Link>
                 <Link className={styles.link} to="/Gallery">Галерея</Link>
                 {!user && <Link className={styles.link} to="/Authorization">Войти</Link>}
                 {!user && <Link className={styles.link} to="/Registration">Регистрация</Link>}

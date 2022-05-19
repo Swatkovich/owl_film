@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import styles from './FormTab.module.css';
 import {useAuth} from '../../contexts/Auth';
 import {useMessage} from "../../contexts/Message";
-import { useNavigate } from 'react-router-dom';
 
 const FormTab = () => {
     const {user} = useAuth()
@@ -21,12 +20,6 @@ const FormTab = () => {
     const handleColorChange = e => {
         setColor('#FFFAFA')
     }
-
-    let navigate = useNavigate();
-    const routeChange = () => {
-        navigate("/")
-    }
-
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -50,7 +43,6 @@ const FormTab = () => {
             setEmail('');
             setObject('');
             setMessage('');
-            routeChange();
         })
     }
 

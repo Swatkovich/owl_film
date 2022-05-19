@@ -1,22 +1,19 @@
-import {useEffect, useState } from 'react'
+import "./styles.css";
+import React from "react";
+import {useMessage} from '../../contexts/Message'
+import {Modal} from '../Modal'
 
-import { createPortal } from 'react-dom';
-import "./Modal.css";
-import styles from "../FormTab/FormTab.module.css";
-import React from "@types/react";
+export const Message = () => {
+    const {message, setMessage} = useMessage()
 
-const Modal = ({ children }) => {
-
-    { sucsessMessage &&
-    <Modal>
-        <div className={styles.modal_window}>
-            {sucsessMessage}
-            <button className={styles.modal_button} onClick={() => setSucsessMessage(null)}>ОК</button>
-        </div>
-    </Modal>
+    if (!message) {
+        return null
     }
 
-    return createPortal(<div className="modal">{children}</div>, document.body)
+    return <Modal>
+        <div id='modal_window'>
+            {message}
+            <button id='modal_button' onClick={() => setMessage(null)}>ОК</button>
+        </div>
+    </Modal>
 }
-
-export default Modal;

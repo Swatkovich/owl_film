@@ -10,8 +10,8 @@ const database = new Database();
 
 ordersRouter.post("/", (req, res) => {
   const orderId = database.addOrder(req.body);
-
-  res.status(201).send(orderId);
+  const orders = database.getOrders();
+  res.status(201).send(orders);
 });
 
 ordersRouter.get("/", (req, res) => {

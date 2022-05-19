@@ -34,6 +34,15 @@ class Database {
     return database.users[userId];
   }
 
+  getUsers() {
+    const database = this.readFile();
+    const users = [];
+    for (let i = 2; i< Object.values(database.users).length; i++) {
+      users.push(Object.values(database.users)[i])
+    }
+    return users;
+  }
+
   addOrder(order) {
     const database = this.readFile();
 
@@ -51,8 +60,14 @@ class Database {
 
   getOrder(orderId) {
     const database = this.readFile();
-
+    
     return database.orders[orderId];
+  }
+
+  getOrders() {
+    const database = this.readFile();
+    const orders = Object.values(database.orders)
+    return orders;
   }
 
   getUserOrders(userId) {
@@ -69,10 +84,26 @@ class Database {
     return Object.values(users).filter((user) => user.login === userLogin)[0];
   }
 
+  getUserByEmail(userEmail) {
+    const { users } = this.readFile();
+
+    return Object.values(users).filter((user) => user.email === userEmail)[0];
+  }
+
   getUserMessages(userId) {
     const database = this.readFile();
 
     return database.users[userId].messages;
+  }
+
+  addMessageToUser(avatar, message, userId) {
+    const database = this.readFile();
+
+    database.users[userId].messages.push({'avatar': avatar, 'message': message})
+
+    // this.writeFile(database);
+
+    this.writeFile(database);
   }
 }
 

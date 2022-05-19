@@ -26,18 +26,18 @@ export default function Profile() {
     fetch('http://localhost:3001/api/Registration', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json', "auth-token": localStorage.getItem("token")} 
-    }).then(res => res.json()).then(data => setUser(data));
+    }).then(res => res.json()).then(data => {setUser(data)});
   }, [])
 
   return (
     <div className={styles.content_box}>
         <div className={styles.content_box_left}>
-          {user ? <ProfileTab user={user} /> : null }
-          {messages ? <Dialog messages={messages}/> : null}
+          {user ? <ProfileTab user={user}  /> : null }
+          {messages ? <Dialog messages={messages} user={user}/> : null}
         </div>
       <div className={styles.orders_box}>
         <p className={styles.orders_title}>ЗАКАЗЫ</p>
-        {orders ? <Orders orders={orders}/> : null}
+        {orders && <Orders orders={orders} isAdmin={user.role === 'admin'}/>}
       </div>
     </div> 
   );

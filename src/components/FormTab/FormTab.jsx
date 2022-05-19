@@ -1,7 +1,10 @@
 // import { Response } from 'express';
 import React, { useState } from 'react';
+// import { useAuth } from '../../AuthContext';
+import Modal from '../Modal/Modal';
 
 import styles from './FormTab.module.css';
+import { useAuth } from '../../AuthContext';
 
 const FormTab = (props) => {
   const [surname, setSurname] = useState('');
@@ -9,12 +12,13 @@ const FormTab = (props) => {
   const [email, setEmail] = useState('');
   const [object, setObject] = useState('');
   const [message, setMessage] = useState('');
+  const [sucsessMessage, setSucsessMessage] = useState(null);
   const today = new Date(),
   date = today.getDate() +'.'+ (today.getMonth() + 1) + '.' + today.getFullYear();
   const [color, setColor] = useState('#7c7c7c');
+  const {setOrders} = useAuth;
 
   const handleColorChange = e => {
-    console.log(color);
     setColor('#FFFAFA')
   }
 
@@ -26,15 +30,17 @@ const FormTab = (props) => {
       headers: { 'Content-Type': 'application/json'},
     })
         .then(response => response.json())
-        .then(data => (data.id));
+        .then(data => setOrders(data));
     setSurname('');
     setName('');
     setEmail('');
     setObject('');
     setMessage('');
+    setSucsessMessage('Вы успешно отправили заявку');
   }
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <p className={styles.formName}>Оставить заявку</p>
       <div className={styles.textStar}>
@@ -114,9 +120,18 @@ const FormTab = (props) => {
         <label htmlFor="check">Я согласен отправить мою информацию <span className={styles.font_change}>Owl Film</span></label>
       </div>
      
-        <input type="submit" name = "Submit" value="Отправить"/>
+        <input type="submit" name = "SubmitForm" value="Отправить"/>
       
   </form>
+  { sucsessMessage && 
+      <Modal>
+        <div className={styles.modal_window}>
+          {sucsessMessage}
+          <button className={styles.modal_button} onClick={() => setSucsessMessage(null)}>ОК</button>
+        </div>
+      </Modal>
+      }
+  </>
   )
 }
 

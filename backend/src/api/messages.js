@@ -21,4 +21,11 @@ messagesRouter.get('/', (req, res) => {
   });
 })
 
+messagesRouter.post('/', (req, res) => {
+  const {avatar, message, userId} = req.body;
+  database.addMessageToUser(avatar, message, userId);
+
+  res.status(201).send();
+})
+
 module.exports = messagesRouter;

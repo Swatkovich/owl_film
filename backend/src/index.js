@@ -28,3 +28,5 @@ app.get('/api/item/:slug', (req, res) => {
 app.listen(3001, () => {
   console.log(`Linstening port ${3001}`);
 });
+
+module.exports = app;

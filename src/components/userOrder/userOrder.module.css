@@ -1,11 +1,3 @@
-.orders_box {
-  /* height: 80%; */
-  width: 100%;
-  margin-right: 2vw;
-  overflow: auto;
-  padding-bottom: 2vh;
-}
-
 .order_element {
   display: flex;
   justify-content: space-between;

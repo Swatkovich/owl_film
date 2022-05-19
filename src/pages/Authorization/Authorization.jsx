@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../AuthContext';
+import Modal from '../../components/Modal/Modal';
 
 import styles from "./Authorization.module.css";
 
 export default function Authorization() {
+  const [errorMessage, setErrorMessage] = useState(null);
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
+  const {saveToken} = useAuth();
+  const {setSucsessMessage} = useAuth();
 
   let navigate = useNavigate();
   const routeChange = () => {
@@ -21,17 +26,19 @@ export default function Authorization() {
       headers: { 'Content-Type': 'application/json'},
     }).then((res) => {
       if (res.status === 403) {
-          alert('Неверный Логин или Пароль');
+          setErrorMessage('Неверный Логин или Пароль');
       }
           else {
+          setSucsessMessage('Успешная авторизация');
           routeChange();
           return res.text();
         }
-    }).then(token => localStorage.setItem("token", token))
+    }).then(saveToken)
     setPassword('');
   }
 
   return (
+    <>
     <form onSubmit={handleSubmit} className={styles.auth_box}>
     <div className={styles.login_data}>
       <input 
@@ -43,19 +50,28 @@ export default function Authorization() {
         required
       />
       <input 
-        type="text" 
-        name="Password" 
+        type="password" 
+        name="LoginPassword" 
         value={password} 
         onChange={(e) => setPassword(e.target.value)} 
         placeholder="Пароль" 
         required
       />
-    </div>
       <input 
         type="submit" 
-        name = "Submit" 
+        name = "SubmitForm" 
         value="Войти"
       />
+      </div>
     </form>
+    { errorMessage && 
+      <Modal>
+        <div className={styles.modal_window}>
+          {errorMessage}
+          <button className={styles.modal_button} onClick={() => setErrorMessage(null)}>ОК</button>
+        </div>
+      </Modal>
+      }
+</>
   );
 }

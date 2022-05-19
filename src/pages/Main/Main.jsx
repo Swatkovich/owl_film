@@ -1,5 +1,7 @@
 import styles from "./Main.module.css";
 import ToFormButton from '../../components/ToFormButton/ToFormButton';
+import { useAuth } from "../../AuthContext";
+import Modal from "../../components/Modal/Modal";
 
 import welcomingImage from '../../components/componentsImage/3.2.png'
 import firstImage from '../../components/componentsImage/4.2.png'
@@ -9,7 +11,10 @@ import thirdImage from '../../components/componentsImage/7.2.png'
 import {Link} from "react-router-dom";
 
 function Main() {
+  const {sucsessMessage, setSucsessMessage} = useAuth();
+
   return (
+    <>
       <div className={styles.application2}>
       <div className={styles.body}>
       <div className={styles.bodyUnit}>
@@ -33,6 +38,15 @@ function Main() {
       </div>
     </div>
       </div>
+      { sucsessMessage && 
+      <Modal>
+        <div className={styles.modal_window}>
+          {sucsessMessage}
+          <button className={styles.modal_button} onClick={() => setSucsessMessage(null)}>ОК</button>
+        </div>
+      </Modal>
+     }
+      </>
   );
 }
 

@@ -11,7 +11,7 @@ export default function Profile() {
     let [orders, setOrders] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:3001/api/Orders', {
+        fetch(`${process.env.URL}/${process.env.PORT}/api/Orders`, {
             method: 'GET',
             headers: {'Content-Type': 'application/json', "auth-token": token}
         }).then(res => res.json()).then(setOrders);

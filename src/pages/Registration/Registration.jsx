@@ -26,7 +26,7 @@ export default function Registration() {
             setPasswordConfirm('');
             return
         }
-        fetch('http://localhost:3001/api/Registration', {
+        fetch(`${process.env.URL}/${process.env.PORT}/Registration`, {
             method: 'POST',
             body: JSON.stringify({
                 name,

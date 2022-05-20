@@ -20,7 +20,7 @@ export default function Authorization() {
 
     const handleSubmit = e => {
         e.preventDefault()
-        fetch(`${process.env.URL}/${process.env.PORT}/api/Login`, {
+        fetch(`/api/Login`, {
             method: 'POST',
             body: JSON.stringify({"login": login, "password": password}),
             headers: {'Content-Type': 'application/json'},

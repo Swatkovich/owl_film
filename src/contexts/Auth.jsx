@@ -15,7 +15,7 @@ export const AuthProvider = ({children}) => {
 
     useEffect(()=> {
         if(token) {
-            fetch(`${process.env.URL}/${process.env.PORT}/api/Registration`, {
+            fetch(`/api/Registration`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json',  "auth-token": token }
             }).then(res => res.json()).then(setUser);

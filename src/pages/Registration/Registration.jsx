@@ -26,7 +26,7 @@ export default function Registration() {
             setPasswordConfirm('');
             return
         }
-        fetch(`${process.env.URL}/${process.env.PORT}/Registration`, {
+        fetch(`api/Registration`, {
             method: 'POST',
             body: JSON.stringify({
                 name,

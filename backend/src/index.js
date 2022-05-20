@@ -15,9 +15,9 @@ app.use(express.json());
 
 app.use("/api", apiRouter);
 
-// app.get('*', (req, res) => {
-//   this.response.sendFile(path.join(CLIENT_BULD_PATH));
-// })
+app.get('*', (req, res) => {
+  this.response.sendFile(path.join(CLIENT_BULD_PATH));
+})
 
 app.listen(3001, () => {
   console.log(`Linstening port ${3001}`);

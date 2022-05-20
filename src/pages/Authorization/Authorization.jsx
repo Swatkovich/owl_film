@@ -29,6 +29,9 @@ export default function Authorization() {
                 if (res.status === 403) {
                     throw new Error('Неверный Логин или Пароль')
                 }
+                if (res.status === 405) {
+                    throw new Error('Ошибка соединения')
+                }
                 return res.text();
             })
             .then((token) => {

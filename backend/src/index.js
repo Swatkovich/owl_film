@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const { v4 } = require('uuid')
 
 const apiRouter = require("./api/api");
@@ -37,7 +37,7 @@ app.get('*', (req, res) => {
   this.response.sendFile(path.join(CLIENT_BULD_PATH));
 })
 
-app.listen(PORT || 3000, () => {
+app.listen(PORT, () => {
   console.log(`Linstening port ${PORT}`);
 });
 

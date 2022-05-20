@@ -20,7 +20,7 @@ export default function Authorization() {
 
     const handleSubmit = e => {
         e.preventDefault()
-        fetch(`/api/Login`, {
+        fetch(`https://coursework-swatkovich.vercel.app/api/Login`, {
             method: 'POST',
             body: JSON.stringify({"login": login, "password": password}),
             headers: {'Content-Type': 'application/json'},

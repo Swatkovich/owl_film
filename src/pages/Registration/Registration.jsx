@@ -26,7 +26,7 @@ export default function Registration() {
             setPasswordConfirm('');
             return
         }
-        fetch(`api/Registration`, {
+        fetch(`https://coursework-swatkovich.vercel.app/api/Registration`, {
             method: 'POST',
             body: JSON.stringify({
                 name,

@@ -36,14 +36,14 @@ export default function Admin() {
 
 
   useEffect(() => {
-    fetch(`${process.env.URL}/${process.env.PORT}/api/AdminOrders`, {
+    fetch(`/api/AdminOrders`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }).then(res => res.json()).then(data => {setOrders(data)});
   }, [])
 
   useEffect(() => {
-    fetch(`${process.env.URL}/${process.env.PORT}/api/Admin`, {
+    fetch(`/api/Admin`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }).then(res => res.json()).then(data => {setUsers(data);});
@@ -58,7 +58,7 @@ export default function Admin() {
     if (!messageText) {
       return
     }
-    fetch(`${process.env.URL}/${process.env.PORT}/api/Messages` , {
+    fetch(`/api/Messages` , {
       method: 'POST',
       body: JSON.stringify({ "avatar": "avatar2", "message": messageText, "userId": user.id}),
       headers: { 'Content-Type': 'application/json'},

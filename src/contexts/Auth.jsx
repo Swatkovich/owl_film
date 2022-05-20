@@ -17,6 +17,7 @@ export const AuthProvider = ({children}) => {
         if(token) {
             fetch(`/api/Registration`, {
                 method: 'GET',
+                mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json',  "auth-token": token }
             }).then(res => res.json()).then(setUser);
         } else {

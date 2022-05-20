@@ -22,6 +22,7 @@ export default function Authorization() {
         e.preventDefault()
         fetch(`/api/Login`, {
             method: 'POST',
+            reason: '',
             body: JSON.stringify({"login": login, "password": password}),
             headers: {'Content-Type': 'application/json'},
         })

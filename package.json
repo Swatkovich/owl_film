@@ -20,7 +20,7 @@
     "debug": "~2.6.9"
   },
   "scripts": {
-    "start": "set PORT=3001 && node ./backend/src/index.js",
+    "start": "node ./backend/src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

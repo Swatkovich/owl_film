@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const PORT = process.env.PORT;
 
 const apiRouter = require("./api/api");
 const CLIENT_BULD_PATH = path.join(__dirname, '../../build')
@@ -19,10 +20,9 @@ app.get('*', (req, res) => {
   this.response.sendFile(path.join(CLIENT_BULD_PATH));
 })
 
-app.listen(3001, () => {
-  console.log(`Linstening port ${3001}`);
+app.listen(PORT, () => {
+  console.log(`Linstening port ${PORT}`);
 });
 
 module.exports = app;
-
 

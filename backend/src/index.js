@@ -24,10 +24,6 @@ app.get('/api', (req, res) => {
   res.end(`Hello! Go to item: <a href="${path}">${path}</a>`);
 });
 
-app.get('/Form', (req, res) => {
-  res.send("страницу лучше не обновляйте. Закройте и зайдите заново. В процессе лечения");
-})
-
 app.get('/api/item/:slug', (req, res) => {
   const { slug } = req.params;
   res.end(`Item: ${slug}`);

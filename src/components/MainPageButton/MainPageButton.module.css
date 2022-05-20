@@ -1,0 +1,12 @@
+.main_page_button {
+  display: block;
+  width: 12vh;
+  height: 10vh;
+  margin-bottom: 0.5vh;
+}
+
+
+
+.main_page_button:hover path{
+  fill: rgba(3, 3, 3);
+}

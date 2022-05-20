@@ -1,0 +1,156 @@
+.socialList {
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 40vh;
+  left: -1vw;
+  color: transparent;
+}
+
+.iconTwitter { 
+  display: block;
+  background-image: url('../componentsImage/Twitter.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 38px;
+  margin-bottom: 15px;
+}
+
+.svg_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  border-radius: 1vh;
+  padding: 0.5vh;
+}
+
+.svg_div:hover{
+  background-color: #e9e9e9;
+  box-shadow: 0px 0px 15px #e9e9e9;
+}
+
+.inst_svg {
+  width: 50px;
+  height: 50px;
+}
+
+.inst_svg:hover path{
+  fill: rgba(3, 3, 3);
+}
+
+.email_svg:hover path{
+  fill: rgba(3, 3, 3);
+}
+
+.qr_img {
+  margin-top: 5vh;
+  width: 40vh;
+  height: 40vh;
+  border: 0.15vh solid rgba(3,3,3);
+  box-shadow: 0px 0px 15vh 10vh #e9e9e9;
+}
+
+.iconLinkedin { 
+  display: block;
+  background-image: url('../componentsImage/Linkedin.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 38px;
+  margin-bottom: 18px;
+}
+
+.iconEmail { 
+  display: block;
+  background-image: url('../componentsImage/Email.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 38px;;
+}
+
+.modal_window {
+  display: flex;
+  position: fixed;
+  top: 20%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_window_email {
+  position: fixed;
+    display: flex;
+    flex-flow: column;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border: 1px solid #e9e9e9;
+    background-image: url(../../img/Background_long_4.jpg);
+    width: 35vw;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    color: #e9e9e9;
+    font-weight: 400;
+    font-size: 1.5vw;
+    border-radius: 1vh;
+    text-decoration: none;
+    box-shadow: 0px 0px 5vh -2vh #e9e9e9;
+}
+ 
+.modal_button {
+  all: unset;
+  text-align: center;
+  background-color: rgba(3,3,3);
+  margin-top: 8vh;
+  width: 10vw;
+  height: 4vh;
+  border: 0.25vh solid #e9e9e9;
+  border-radius: 2vh;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  color: #e9e9e9;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+
+.modal_button:hover {
+  background-color: #e9e9e9;
+  color: #333333;
+  box-shadow: 0px 0px 15px #e9e9e9;
+}
+
+.modal_button_email {
+  all: unset;
+  text-align: center;
+  background-color: rgba(3,3,3);
+  margin-top: 6vh;
+  width: 10vw;
+  height: 4vh;
+  border: 0.25vh solid #e9e9e9;
+  border-radius: 2vh;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  color: #e9e9e9;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+
+.modal_button_email:hover {
+  background-color: #e9e9e9;
+  color: #333333;
+  box-shadow: 0px 0px 15px #e9e9e9;
+}

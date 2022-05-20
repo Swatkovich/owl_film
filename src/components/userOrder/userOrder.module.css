@@ -1,0 +1,108 @@
+.order_element {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(221, 221, 221, 0.1);
+  border: 0.25vh solid antiquewhite;
+  border-radius: 0.75vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 4vh;
+  width: 100%;
+  height: 6vh;
+  align-items: center;
+}
+
+.order_element:first-child {
+  margin-top: 0;
+}
+
+.orser_element_text {
+  font-size: 3vh;
+  font-weight: 600;
+}
+
+.download_button {
+  box-sizing: border-box;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  color: #FFFAFA;
+  border: 0.25vh solid #FFFAFA;
+  background-color: rgb(16, 122, 48);
+  border-radius: 4px;
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.download_button:hover {
+  background-color: #FFFAFA;
+  color: #333333;
+  box-shadow: 0px 0px 15px #FFFAFA;
+}
+
+.modal_window {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
+.modal_button {
+  all: unset;
+  text-align: center;
+  background-color: rgba(3,3,3);
+  margin-top: 6vh;
+  width: 10vw;
+  height: 3vh;
+  border: 0.25vh solid #e9e9e9;
+  border-radius: 2vh;
+  transition-property: background-color, border, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  color: #e9e9e9;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+
+.modal_button:hover {
+  background-color: #e9e9e9;
+  color: #333333;
+  box-shadow: 0px 0px 15px #e9e9e9;
+}
+
+.modal_link {
+  margin-top: 3vh;
+  text-decoration: none;
+  color: #e9e9e9;
+  font-size: 3.5vh;
+}
+
+input[name = Link] {
+  /* margin-top: 5vh !important; */
+  width: 90%;
+}
+
+input[name = SubmitLink] {
+  transition-property: background-color, border, color, box-shadow;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  margin-top: 4vh;
+  width: 50%;
+}
+
+input[name = SubmitLink]:hover {
+  background-color: #e9e9e9;
+  color: #333333;
+  box-shadow: 0px 0px 15px #e9e9e9;
+}
+
+.updateForm {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

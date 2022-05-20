@@ -23,7 +23,7 @@ const FormTab = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        fetch(`${process.env.URL}/${process.env.PORT}/api/Orders`, {
+        fetch(`/api/Orders`, {
             method: 'POST',
             body: JSON.stringify({
                 "surname": surname,

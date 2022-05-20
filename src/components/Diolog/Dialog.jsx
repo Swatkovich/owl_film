@@ -9,7 +9,7 @@ export default function Dialog(props) {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.URL}/${process.env.PORT}/api/Messages`, {
+        fetch(`/api/Messages`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json', "auth-token": token},
         }).then(res => res.json()).then(setMessages);
@@ -32,7 +32,7 @@ export default function Dialog(props) {
         if (!messageText) {
             return
         }
-        fetch(`${process.env.URL}/${process.env.PORT}/api/Messages`, {
+        fetch(`/api/Messages`, {
             method: 'POST',
             body: JSON.stringify({"avatar": "avatar1", "message": messageText, "userId": user.id}),
             headers: {'Content-Type': 'application/json'},

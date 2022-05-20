@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './MainPageButton.module.css';
-import logo from '../componentsImage/logo.png'
 
 const MainPageButton = () => {
   return (

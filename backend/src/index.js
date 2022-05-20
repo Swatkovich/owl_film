@@ -20,7 +20,7 @@ app.get('*', (req, res) => {
   this.response.sendFile(path.join(CLIENT_BULD_PATH));
 })
 
-app.listen(PORT, () => {
+app.listen(PORT || 3000, () => {
   console.log(`Linstening port ${PORT}`);
 });
 

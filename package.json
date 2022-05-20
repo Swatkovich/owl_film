@@ -21,7 +21,6 @@
   },
   "scripts": {
     "start": "set PORT=3001 && node ./backend/src/index.js",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "express": "set PORT=3001 && node ./backend/src/index.js"

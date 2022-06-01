@@ -38,7 +38,7 @@ const UserOrder = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(uploadLink);
-        fetch(`/api/Orders`, {
+        fetch('http://localhost:3001/api/Orders', {
             method: 'PUT',
             body: JSON.stringify({"link": uploadLink, "orderId": props.id}),
             headers: {'Content-Type': 'application/json'},

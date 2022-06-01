@@ -20,7 +20,7 @@
     "debug": "~2.6.9"
   },
   "scripts": {
-    "start": "node ./backend/src/index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

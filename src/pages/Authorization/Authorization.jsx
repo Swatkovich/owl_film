@@ -20,18 +20,14 @@ export default function Authorization() {
 
     const handleSubmit = e => {
         e.preventDefault()
-        fetch(`/api/Login`, {
+        fetch('http://localhost:3001/api/Login', {
             method: 'POST',
-            reason: '',
             body: JSON.stringify({"login": login, "password": password}),
             headers: {'Content-Type': 'application/json'},
         })
             .then((res) => {
                 if (res.status === 403) {
                     throw new Error('Неверный Логин или Пароль')
-                }
-                if (res.status === 405) {
-                    throw new Error('Ошибка соединения')
                 }
                 return res.text();
             })

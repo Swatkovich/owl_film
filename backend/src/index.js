@@ -1,15 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
-const PORT = process.env.PORT || 3000;
-const { v4 } = require('uuid')
+const { v4 } = require('uuid');
 
 const apiRouter = require("./api/api");
-const CLIENT_BULD_PATH = path.join(__dirname, '../../build')
 
 const app = express();
-
-app.use(express.static(CLIENT_BULD_PATH));
 
 app.use(cors());
 
@@ -29,13 +24,9 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-app.get('*', (req, res) => {
-  this.response.sendFile(path.join(CLIENT_BULD_PATH));
-})
 
-app.listen(PORT, () => {
-  console.log(`Linstening port ${PORT}`);
+app.listen(3001, () => {
+  console.log(`Linstening port ${3001}`);
 });
 
 module.exports = app;
-

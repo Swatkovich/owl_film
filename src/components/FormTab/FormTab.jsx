@@ -23,7 +23,7 @@ const FormTab = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        fetch(`/api/Orders`, {
+        fetch('http://localhost:3001/api/Orders', {
             method: 'POST',
             body: JSON.stringify({
                 "surname": surname,

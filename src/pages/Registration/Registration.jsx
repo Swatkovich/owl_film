@@ -26,7 +26,7 @@ export default function Registration() {
             setPasswordConfirm('');
             return
         }
-        fetch(`/api/Registration`, {
+        fetch('http://localhost:3001/api/Registration', {
             method: 'POST',
             body: JSON.stringify({
                 name,

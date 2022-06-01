@@ -1,4 +1,4 @@
-import {createContext, useState, useContext} from 'react';
+import {createContext, useState, useContext, useEffect} from 'react';
 
 const MessageContext = createContext({
     /** Глобальное сообщение пользователю в модальном окне с кнопкой ОК */

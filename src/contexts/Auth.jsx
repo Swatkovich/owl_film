@@ -15,7 +15,7 @@ export const AuthProvider = ({children}) => {
 
     useEffect(()=> {
         if(token) {
-            fetch(`/api/Registration`, {
+            fetch('http://localhost:3001/api/Registration', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json',  "auth-token": token }
             }).then(res => res.json()).then(setUser);
